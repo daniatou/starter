@@ -1,0 +1,32 @@
+
+    
+    <li class="list-group-item">
+      <div style="margin-top: 10px;">
+        <h3> appareil: {{appareilName}} ===> {{isActif}} </h3>
+        <div style="margin-top: 10px;">
+            <input type="text" class="form-control" placeholder="AppareilsName"
+            [(ngModel)]="appareilName">
+        </div>
+        <div class="marge_sup">
+          <span>
+           
+            <button *ngIf="isActif==='Eteint'" class="btn btn-success" (click)="onAllumer()"
+              (click)='onAllumer()'>Allumer
+            </button>
+            <button *ngIf="isActif==='Allumer'" class="btn btn-warning" (click)="onEteindre()"
+              >Eteindre
+            </button>
+            <button class="btn btn-dark" style="margin-left: 6px;" (click)="onNavigateToSingleApp()"
+              >Details
+            </button>
+          </span>  
+          <span class="float-right">
+            <button class="btn btn-danger" (click)="[deleteAppareil()]"
+              >Supprimer
+            </button>
+          </span>
+
+        </div>
+    </div>
+    </li> 
+  
